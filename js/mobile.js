@@ -1,7 +1,7 @@
 if (window.innerWidth < 1000){
-    console.log("hello")
+    // console.log("hello")
     // Constants for acceleration thresholds
-    const SHAKE_THRESHOLD = 15; // You may need to adjust this threshold based on testing
+    const SHAKE_THRESHOLD = 30; // You may need to adjust this threshold based on testing
     const TIMEOUT = 1000; // Timeout for shaking detection
 
     let lastUpdate = 0;
@@ -11,6 +11,9 @@ if (window.innerWidth < 1000){
         DeviceMotionEvent.requestPermission()
         .then(response => {
             if (response == 'granted') {
+                let requestButton = document.getElementById("request-button");
+                requestButton.style.display = "none";
+
                 // Listen for device motion events
                 window.addEventListener('devicemotion', function(event) {
                     console.log("listerner attached")
@@ -38,10 +41,13 @@ if (window.innerWidth < 1000){
                             // Shake detected, play video
                             let thumbnailVideo = document.getElementById("thumbnail-video");
                             let iframeVideo = document.getElementById("iframe-video");
-                            thumbnailVideo.style.display = "none";
-                            iframeVideo.style.display = "block";
+                            let rotatingTextMobile = document.getElementById("rotating-text-mobile");
                             
-                            thumbnailVideo.src += '&autoplay=1';                
+
+                            thumbnailVideo.style.display = "none";
+                            rotatingTextMobile.style.display = "none";                            
+                            iframeVideo.style.display = "block";                            
+                            iframeVideo.src += '&autoplay=1';                
                         }
 
                         // Update last values
