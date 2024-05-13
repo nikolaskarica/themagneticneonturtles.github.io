@@ -4,156 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bad Guys From TMNT 🐢</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-    #attached-element {
-        width: 600px;
-        height: 339px;    
-        
-        position: absolute;
-        left:30%;
-        top:10%;
-        z-index: -9999;
-    }
-
-    #attached-element h2 {
-        text-align: right;
-    }
-
-    #attached-element img {
-        width: 100%;
-        height: 100%;
-    }
-
-    #attached-element iframe {
-        width: 100%;
-        height: 100%;
-        
-        display: none;
-/*        position: absolute;*/
-/*        pointer-events: none;  Ensures the attached element does not interfere with mouse events         */
-    }
-
-
-    .navbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: #333;
-        padding: 10px;
-        position: fixed;
-        width: 100%;
-        text-align: right;
-    }
-    .navbar .logo {
-        margin-right: 30px;
-        margin-top: 30px;
-        width: 250px;
-/*        display: inline-block;*/
-    }
-
-    .navbar .logo img {
-        width: 100%;
-        height: auto;
-    }
-
-    .navbar .intro-text {
-        margin-left: 30px;
-        font-size: 30px;
-        font-weight: bold;
-    }
-
-    .navbar .intro-text span span {
-        background-color: #333;
-        padding: 0 5px 0 5px;
-        color: #fff;
-    }
-
-    .footer {
-        position: fixed;
-        bottom: 0;
-        margin-bottom: 30px;
-        margin-left: 30px;
-    }
-
-    .footer ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-    .footer ul li {
-/*        display: inline;*/
-        margin-right: 20px;
-        margin-bottom: 10px;
-        text-align: right;
-    }
-    .footer ul li a {
-        text-decoration: none;
-        color: #333;
-        font-size: 30px;
-        font-weight: bold;
-
-    }    
-
-    .footer ul li a:hover{
-        text-decoration: underline!important;
-    }
-
-/*    .circle-text {
-        width: 100px;
-        fill: transparent;
-    }
-
-    .circle-text text {
-        fill: #333;
-        font-size:50px;
-    }*/
-
-    #rotating-text {
-        height: 100px;
-        width: 100px;
-        position: relative;
-        font-size: 9px;
-/*        transform: rotate(285deg);*/
-        top: 60px;
-        left: -50px;
-         animation: rotate-effect 4s linear infinite;
-         text-shadow: 0px 4px 1px #327a3136;
-
-    }    
-
-    #rotating-text span {
-      position: absolute;
-      left: 50%;
-      transform-origin: 0px 60px;
-      transform-style: flat;
-      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-      text-transform: uppercase;
-      font-weight: 900;
-      color: #333;
-      font-size: 9px;
-    }    
-
-@keyframes rotate-effect {
-  0% {
-    transform: rotate(-170deg);
-  }
-  50% {
-    transform: rotate(-20deg);
-  }
-  100% {
-    transform: rotate(-170deg);
-  }
-}    
-</style>
+<link rel="stylesheet" type="text/css" href="main.css">
+<script type="text/javascript" src="desktop.js"></script>
+<script type="text/javascript" src="mobile.js"></script>
 </head>
 <body>
-<div class="navbar">
+<div class="top-section">
     <div class="intro-text">
         <span>Berlin based.<br>We play <span>feel good</span>, <br> rock cover songs <br> from '80s & '90s.</span>
     </div>
@@ -163,131 +19,24 @@
 </div>
 
 <div id="attached-element">
-    <p id="rotating-text"></p>
+    <p id="rotating-text-mobile"><span>Shake your device to play!</span></p>
+    <p id="rotating-text-desktop"></p>
     <!-- <h2>Latest gig</h2> -->
-    <img id="thumbnailVideo" src="video-thumbnail.jpg" / >
-    <iframe id="iframeVideo" width="560" height="315" src="https://www.youtube.com/embed/ZLQZ8s62zZc?si=woe3qq-okvdqr0CR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <img id="thumbnail-video" src="video-thumbnail.png" / >
+    <iframe id="iframe-video" src="https://www.youtube.com/embed/ZLQZ8s62zZc?si=woe3qq-okvdqr0CR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-<div class="footer">
-    <ul>                
-        <!-- <li><a href="#">About the band 🐢</a></li> -->
-        <li><a href="https://www.youtube.com/@BadGuysfromTMNT" target="_blank">Check out more gigs 👀</a></li>
-        <li><a href="mailto:media.badguys@gmail.com">Reach out to us 🤙</a></li>
-    </ul>
+<div class="bot-section"> 
+    <div class="nav">
+        <ul>                
+            <!-- <li><a href="#">About the band 🐢</a></li> -->
+            <li><a href="https://www.youtube.com/@BadGuysfromTMNT" target="_blank">Check out more gigs 👀</a></li>
+            <li><a href="mailto:media.badguys@gmail.com">Reach out to us 🤙</a></li>
+        </ul>
+    </div>
+    <div class="mascot">
+        <img src="logo.png" alt="Bad Guys From TMNT - Logo">
+    </div>
 </div>
-
-<script>
-    // Create attached element by adding event listener
-   document.addEventListener("DOMContentLoaded", function() {
-        // Rotating text params
-        var rotatingTextStr = "SHAKE ME!";
-        let rotatingText = document.getElementById("rotating-text");
-
-        // Create rotating text
-        function rotateText(){        
-            for (let i = 0; i < rotatingTextStr.length; i++) {
-                let span = document.createElement('span');
-                span.innerHTML = rotatingTextStr[i] 
-                rotatingText.appendChild(span);
-                span.style.transform = `rotate(${11*i}deg)`;
-            }
-        }
-
-        // Attached video params config
-        let attachedElement = document.getElementById("attached-element");
-        let thumbnailVideo = document.getElementById("thumbnailVideo");
-        let iframeVideo = document.getElementById("iframeVideo");
-
-        // Shaking params config
-        let lastMouseX = 0;
-        let lastMouseY = 0;
-        let lastMoveTime = Date.now();
-        let timer;
-        let clickCount = 0; 
-
-        // Measuring of shaking velocity and deataching attached element
-        function followMouseMovement(event) {
-            let now = Date.now();
-            let deltaTime = now - lastMoveTime + 7; 
-            let deltaX = event.pageX - lastMouseX;
-            let deltaY = event.pageY - lastMouseY;
-            let distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY) 
-            let speed = distance / deltaTime  // Velocity
-
-            // console.log("Time elapsed since last movement (deltaTime):", deltaTime, "milliseconds");
-            // console.log("Horizontal distance moved by the mouse (deltaX):", deltaX, "pixels");
-            // console.log("Vertical distance moved by the mouse (deltaY):", deltaY, "pixels");
-            // console.log("Distance moved by the mouse (distance):", distance, "pixels");
-            // console.log("Velocity of the mouse movement (speed):", speed, "pixels/millisecond");
-            // console.log("----")
-            // console.log("----")
-
-            // Update element position to follow mouse cursor
-            attachedElement.style.left = (event.pageX) + "px"; // Adding 10px offset for better visibility
-            attachedElement.style.top = (event.pageY - 118) + "px";
-
-            // If the speed is too fast (adjust as needed), detach the element
-            if (speed > 7.5) { // Adjust the threshold as needed
-                // clearTimeout(timer);
-                timer = setTimeout(detachElement, 500); // Detach element after 1 second of fast movement
-            }
-
-            lastMoveTime = now;
-            lastMouseX = event.pageX;
-            lastMouseY = event.pageY;
-        }
-
-        // Deataching element config
-        function detachElement() {
-            // Remove listener from iframe video
-            document.removeEventListener("mousemove", followMouseMovement);
-            
-            // Hide thumbnail video and show actual iframe
-            thumbnailVideo.style.display = "none";
-            iframeVideo.style.display = "block";
-            
-            // Update rotating text from "Shake me" to "Play me"
-            var rotatingText = document.querySelector('#rotating-text');
-            var rotatingTextChars = rotatingText.querySelectorAll('span');
-
-            rotatingTextChars.forEach(span => {
-                span.parentNode.removeChild(span);
-            });
-
-            rotatingTextStr = "PLAY ME!";
-            rotateText();
-            rotatingText.style.animation = "none"
-            rotatingText.style.transform = "rotate(285deg)"
-        }
-
-        function handleClick() {
-            clickCount++;
-            console.log(clickCount)
-            if (clickCount === 2) {
-                clickCount = 0; // Reset click count
-                
-                // Reattach the element to the cursor                
-                // document.addEventListener("mousemove", followMouseMovement);
-                detachElement()
-            } else {
-                clearTimeout(timer);
-                timer = setTimeout(function() {
-                    clickCount = 0;
-                }, 200); // Reset click count after 20ms
-            }
-        }        
-    
-        window.addEventListener("load", rotateText)
-                
-
-        document.addEventListener("mousemove", followMouseMovement);
-
-        document.addEventListener("click", handleClick)
-
-    });
-
-</script>
-
 </body>
 </html>
