@@ -53,7 +53,7 @@ if (window.innerWidth < 1000){
                             rotatingTextMobile.innerHTML = '<span>You rock my dude! Enjoy the epic tunes!</span>'
                             rotatingTextMobile.style.animation = "none"
                             iframeVideo.style.display = "block";
-                            // iframeVideo.src += '&autoplay=1';
+                            iframeVideo.src += '&autoplay=1';
                         }
 
                         // Update last values
