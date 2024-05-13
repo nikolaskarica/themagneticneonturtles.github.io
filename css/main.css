@@ -182,10 +182,13 @@ body {
         padding: 0;
     }
 
+    .bot-section ul li { margin-right:0px; }    
+
     .bot-section .mascot {
         width: 130px;
         margin-top: 10px;
         display:inline-block;
+        margin-right: 0px;
     }
 
     #rotating-text-desktop {
@@ -214,6 +217,7 @@ body {
 /*        transform: translate(0, 0) rotate(0eg);*/
         animation: tilt-n-move-shaking 0.5s linear infinite;
     }
+
 
     @keyframes tilt-n-move-shaking {
       0% { transform: translate(0, 0) rotate(0deg); }
