@@ -1,5 +1,5 @@
 var container = document.getElementById('animate');
-var emoji = ['🐢','🫦','👅','💃','🐒','🐣','🦁','✂️','🥞','🚗','🩲','🛋️', '🪱','👄','🦇'];
+var emoji = ['🐢','🫦','👅','💃','🐒','🐣','🦁','✂️','🥞','🚗','🩲','🛋️', '🪱','👄','🦇', '⛓️', ];
 var circles = [];
 
 // Function to create a circle and add it to the circles array after a delay
@@ -40,7 +40,7 @@ Circle.prototype.update = function() {
   }
   this.y += this.velocity.y;
   this.x += this.velocity.x;
-  this.element.style.opacity = 0.2;
+  this.element.style.opacity = 0.13;
   this.element.style.transform = 'translate3d(' + this.x + 'px, ' + this.y + 'px, 0px)';
 };
 
