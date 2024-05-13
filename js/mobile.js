@@ -1,4 +1,5 @@
 if (window.innerWidth < 1000){
+    console.log("hello")
     // Constants for acceleration thresholds
     const SHAKE_THRESHOLD = 15; // You may need to adjust this threshold based on testing
     const TIMEOUT = 1000; // Timeout for shaking detection
@@ -8,6 +9,7 @@ if (window.innerWidth < 1000){
 
     // Listen for device motion events
     window.addEventListener('devicemotion', function(event) {
+        console.log("listerner attached")
         let currentTime = new Date().getTime();
         let timeDifference = currentTime - lastUpdate;
 
@@ -18,6 +20,9 @@ if (window.innerWidth < 1000){
             y = acceleration.y;
             z = acceleration.z;
 
+            // Log calculations for debugging
+            console.log("X:", x, "Y:", y, "Z:", z);
+
             // Calculate delta values
             let deltaX = Math.abs(x - lastX);
             let deltaY = Math.abs(y - lastY);
@@ -25,6 +30,7 @@ if (window.innerWidth < 1000){
 
             // Check for shaking motion
             if (deltaX > SHAKE_THRESHOLD || deltaY > SHAKE_THRESHOLD || deltaZ > SHAKE_THRESHOLD) {
+                console.log("threshold met!")
                 // Shake detected, play video
                 let thumbnailVideo = document.getElementById("thumbnail-video");
                 let iframeVideo = document.getElementById("iframe-video");
