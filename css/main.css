@@ -156,8 +156,6 @@ body {
     display: none;
 }
 
-#requestMotionPermissionImage {display: none}
-
 
 /*Emoji rain css*/
 #container {
@@ -192,9 +190,8 @@ body {
 /* Only for mobile devices and tablets */
 @media only screen and (max-width: 1000px){
     body {
-        font-size: 1.2em;
+        font-size: 1.12em;
     }
-
 
 
     .top-section .intro-text {
@@ -239,7 +236,14 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -75%);
-        cursor: ;
+    }
+
+    #request-motion-permission-container {
+        max-width: 600px;
+        max-height: 339px;
+        width: 80%;
+        height: auto;
+        z-index: -9;        
     }
 
     #request-motion-permission-container img {
@@ -252,7 +256,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 115%;
+        width: 110%;
     }
 
     #button-19 {
