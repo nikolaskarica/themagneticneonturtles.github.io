@@ -1,3 +1,4 @@
+
 if (window.innerWidth < 1000){
     // console.log("hello")
     // Constants for acceleration thresholds
@@ -6,13 +7,19 @@ if (window.innerWidth < 1000){
 
     let lastUpdate = 0;
     let x, y, z, lastX = 0, lastY = 0, lastZ = 0;
-
+    
    function requestMotionPermission(){
         DeviceMotionEvent.requestPermission()
         .then(response => {
             if (response == 'granted') {
-                let requestButton = document.getElementById("request-button");
-                requestButton.style.display = "none";
+                let requestMotionPermissionContainer = document.getElementById("request-motion-permission-container");
+                let rotatingTextMobile = document.getElementById("rotating-text-mobile");
+                let thumbnailVideo = document.getElementById("thumbnail-video");
+
+                requestMotionPermissionContainer.style.display = "none";
+                rotatingTextMobile.style.display = "inline-block";
+                thumbnailVideo.style.display = "inline-block";
+
 
                 // Listen for device motion events
                 window.addEventListener('devicemotion', function(event) {
@@ -39,15 +46,14 @@ if (window.innerWidth < 1000){
                         if (deltaX > SHAKE_THRESHOLD || deltaY > SHAKE_THRESHOLD || deltaZ > SHAKE_THRESHOLD) {
                             console.log("threshold met!")
                             // Shake detected, play video
-                            let thumbnailVideo = document.getElementById("thumbnail-video");
-                            let iframeVideo = document.getElementById("iframe-video");
-                            let rotatingTextMobile = document.getElementById("rotating-text-mobile");
-                            
+                            // let thumbnailVideo = document.getElementById("thumbnail-video");
+                            let iframeVideo = document.getElementById("iframe-video");                                                        
 
                             thumbnailVideo.style.display = "none";
-                            rotatingTextMobile.style.display = "none";                            
-                            iframeVideo.style.display = "block";                            
-                            iframeVideo.src += '&autoplay=1';                
+                            rotatingTextMobile.innerHTML = '<span>You rock my dude! Enjoy the epic tunes!</span>'
+                            rotatingTextMobile.style.animation = "none"
+                            iframeVideo.style.display = "block";
+                            iframeVideo.src += '&autoplay=1';
                         }
 
                         // Update last values

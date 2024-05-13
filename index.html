@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bad Guys From TMNT 🐢</title>
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="js/desktop.js"></script>
-<script type="text/javascript" src="js/mobile.js"></script>
-</head>
-<body>
-<div class="top-section">
-    <div class="intro-text">
-        <span>Berlin based.<br>We play <span>feel good</span>, <br> rock cover songs <br> from '80s & '90s.</span>
-    </div>
-    <div class="logo">
-        <img src="assets/logo.png" alt="Bad Guys From TMNT - Logo">
-    </div>    
-</div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bad Guys From TMNT 🐢</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
 
-<div id="attached-element">
-    <p id="rotating-text-mobile"><span>Shake your device to play!</span></p>
-    <p id="rotating-text-desktop"></p>
-    <button id="request-button" onclick='requestMotionPermission()'>Request orientation permission</button>
-    <!-- <h2>Latest gig</h2> -->
-    <img id="thumbnail-video" src="assets/video-thumbnail.png" / >
-    <iframe id="iframe-video" src="https://www.youtube.com/embed/ZLQZ8s62zZc?si=woe3qq-okvdqr0CR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+    <body>
+        <div id="all">
+            <div id="container">
+              <div id="animate">
+              </div>
+            </div>
+        </div>
 
-<div class="bot-section"> 
-    <div class="nav">
-        <ul>                
-            <!-- <li><a href="#">About the band 🐢</a></li> -->
-            <li><a href="https://www.youtube.com/@BadGuysfromTMNT" target="_blank">Check out more gigs 👀</a></li>
-            <li><a href="mailto:media.badguys@gmail.com">Reach out to us 🤙</a></li>
-        </ul>
-    </div>
-    <div class="mascot">
-        <img src="assets/logo.png" alt="Bad Guys From TMNT - Logo">
-    </div>
-</div>
-</body>
+        <div class="top-section">
+            <div class="intro-text">
+                <!-- <span>Berlin based.<br>We play <span>feel good</span>, <br> rock cover songs <br> from '80s & '90s.</span> -->
+                <span>Berlin based.<br>We're all about those <br> <span>feel-good vibes</span>,<br>jammin' rock cover tunes <br> from the '80s & '90s!</span>
+            </div>
+            <div class="logo">
+                <img src="assets/logo.png" alt="Bad Guys From TMNT - Logo">
+            </div>    
+        </div>
+        <div id="request-motion-permission-container">
+            <img id="requestMotionPermissionImage" src="assets/video-thumbnail.png" / style="width:100%">
+            <button id="button-19" role="button" onclick='requestMotionPermission()'>Click me to <br> unleash turtle magic!</button>
+        </div>
+        <div id="attached-element">
+            <p id="rotating-text-mobile"><span> Shake your shell for some epic tunes!</span></p>
+            <p id="rotating-text-desktop"></p>
+            <!-- <h2>Latest gig</h2> -->
+            <img id="thumbnail-video" src="assets/video-thumbnail.png" / >
+            <iframe id="iframe-video" src="https://www.youtube.com/embed/ZLQZ8s62zZc?si=woe3qq-okvdqr0CR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <div class="bot-section"> 
+            <div class="nav">
+                <ul>                
+                    <!-- <li><a href="#">About the band 🐢</a></li> -->
+                    <li><a href="https://www.youtube.com/@BadGuysfromTMNT" target="_blank">More awesome gigs 👀</a></li>
+                    <li><a href="mailto:media.badguys@gmail.com">Hit us up 🤙</a></li>
+                </ul>
+            </div>
+            <div class="mascot">
+                <img src="assets/logo.png" alt="Bad Guys From TMNT - Logo">
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="js/desktop.js"></script>
+    <script type="text/javascript" src="js/mobile.js"></script>
+    <script type="text/javascript" src="js/emojirain.js"></script>    
 </html>
