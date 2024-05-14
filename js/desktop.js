@@ -3,7 +3,7 @@ if (window.innerWidth > 1000){
 
 document.addEventListener("DOMContentLoaded", function() {
     // Rotating text params
-    var rotatingTextStr = "SHAKE ME!";
+    var rotatingTextStr = "SHAKE ME OFF!";
     let rotatingText = document.getElementById("rotating-text-desktop");
 
     // Create rotating text

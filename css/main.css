@@ -141,7 +141,7 @@ body {
 
 @keyframes rotate-effect {
     0% {transform: rotate(-170deg);}
-    50% {transform: rotate(-33deg);}
+    50% {transform: rotate(-70deg);}
     100% {transform: rotate(-170deg);}
 }
 
