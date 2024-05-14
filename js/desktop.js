@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             let span = document.createElement('span');
             span.innerHTML = rotatingTextStr[i] 
             rotatingText.appendChild(span);
-            span.style.transform = `rotate(${11*i}deg)`;
+            span.style.transform = `rotate(${12*i}deg)`;
         }
     }
 
@@ -47,12 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Update element position to follow mouse cursor
         attachedElement.style.left = (event.pageX) + "px"; // Adding 10px offset for better visibility
-        attachedElement.style.top = (event.pageY - 118) + "px";
+        attachedElement.style.top = (event.pageY - 160) + "px";
 
         // If the speed is too fast (adjust as needed), detach the element
         if (speed > 7.5) { // Adjust the threshold as needed
             // clearTimeout(timer);
-            timer = setTimeout(detachElement, 500); // Detach element after 1 second of fast movement
+            timer = setTimeout(detachElement(), 500); // Detach element after 1 second of fast movement
         }
 
         lastMoveTime = now;
@@ -71,16 +71,18 @@ document.addEventListener("DOMContentLoaded", function() {
         
         // Update rotating text from "Shake me" to "Play me"
         var rotatingText = document.querySelector('#rotating-text-desktop');
-        var rotatingTextChars = rotatingText.querySelectorAll('span');
+        var attachedElement = document.querySelector('#attached-element');
+        var rotatingTextChars = rotatingText.querySelectorAll('span');          
 
-        rotatingTextChars.forEach(span => {
-            span.parentNode.removeChild(span);
-        });
+        rotatingText.innerHTML = 'You rock my dude! Enjoy some epic tunes!'
 
-        rotatingTextStr = "PLAY ME!";
-        rotateText();
-        rotatingText.style.animation = "none"
-        rotatingText.style.transform = "rotate(285deg)"
+        rotatingText.classList.add("remove-all-rotating-styles")
+        attachedElement.style.top = "110px"
+        attachedElement.style.zIndex = "10"
+
+        if (/[\?&]autoplay=1\b/.test(iframeVideo.src) === false) {
+            iframeVideo.src += '&autoplay=1';
+        }
     }
 
     function handleClick() {
@@ -89,8 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (clickCount === 2) {
             clickCount = 0; // Reset click count
             
-            // Reattach the element to the cursor                
-            // document.addEventListener("mousemove", followMouseMovement);
             detachElement()
         } else {
             clearTimeout(timer);

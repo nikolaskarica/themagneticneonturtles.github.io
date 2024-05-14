@@ -121,41 +121,50 @@ body {
     height: 100px;
     width: 100px;
     position: relative;
-    font-size: 9px;
-    top: 60px;
-    left: -50px;
-    animation: rotate-effect 3s linear infinite;
-    text-shadow: 0px 4px 1px #327a3136;
+    top: 80px;
+    left: -55px;
+    animation: rotate-effect 2.5s linear infinite;
+    text-shadow: 0px 4px 1px #7318d64a;
 }    
 
 #rotating-text-desktop span {
   position: absolute;
   left: 50%;
-  transform-origin: 0px 60px;
+  transform-origin: 0px 70px;
   transform-style: flat;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-transform: uppercase;
   font-weight: 900;
-  color: #333;
-  font-size: 9px;
+  color: #9b1cf6;
+  font-size: 11px;
 }    
 
 @keyframes rotate-effect {
-    0% {
-    transform: rotate(-170deg);
-    }
-    50% {
-    transform: rotate(-20deg);
-    }
-    100% {
-    transform: rotate(-170deg);
-    }
+    0% {transform: rotate(-170deg);}
+    50% {transform: rotate(-33deg);}
+    100% {transform: rotate(-170deg);}
 }
 
 #rotating-text-mobile {
     display: none;
 }
 
+.remove-all-rotating-styles {
+    animation: none !important;
+    position: initial !important;
+    display: inline-block;
+    text-align: center;
+    width: 100% !important;
+    height: auto !important;
+
+/*    margin: 0;*/
+    margin-bottom: 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #9b1cf6;
+    font-size: 11px;    
+}
 
 /*Emoji rain css*/
 #container {
@@ -198,6 +207,10 @@ body {
         width: 150px;
     }
 
+    .top-section .intro-text {
+        margin-left: 15px;
+    }
+
     #attached-element iframe {
         width: 100%;    
         height: 194px;
@@ -226,7 +239,7 @@ body {
         display: block;
     }
 
-    #request-motion-permission-container, #attached-element {
+    #attached-element {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -234,6 +247,10 @@ body {
     }
 
     #request-motion-permission-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -69%);        
         max-width: 600px;
         max-height: 339px;
         width: 80%;
@@ -335,10 +352,10 @@ body {
         font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
         text-transform: uppercase;
         font-weight: 900;
-        color: #333;
+        color: #9b1cf6;
         margin-bottom: 20px;
         font-size: 9px;
-        text-shadow: 0px 4px 1px #327a3136;
+        text-shadow: 0px 4px 1px #7318d64a;
 /*        transform: translate(0, 0) rotate(0eg);*/
         animation: tilt-n-move-shaking 0.5s linear infinite;
     }
