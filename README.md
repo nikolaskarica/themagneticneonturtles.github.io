@@ -1,1 +1,1 @@
-# https://nikolaskarica.github.io/badguysfromtmnt.github.io/
+# https://badguysfromtmnt.com/
