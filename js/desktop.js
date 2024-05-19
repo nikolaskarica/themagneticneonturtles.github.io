@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
         attachedElement.style.top = (event.pageY - 160) + "px";
 
         // If the speed is too fast (adjust as needed), detach the element
-        if (speed > 7.5) { // Adjust the threshold as needed
+        if (speed > 13) { // Adjust the threshold as needed
             // clearTimeout(timer);
             timer = setTimeout(detachElement(), 500); // Detach element after 1 second of fast movement
         }
