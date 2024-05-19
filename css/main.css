@@ -117,6 +117,27 @@ body {
     text-decoration: underline!important;
 }
 
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: #333;
+    opacity: 0.5;
+}
+
+.footer ul li a:hover {
+    text-decoration: underline;    
+}
 
 #rotating-text-desktop {
     height: 100px;
@@ -274,9 +295,9 @@ body {
 
     #button-19 {
       appearance: button;
-      background-color: #7318d6;
+      background-color: #5b417d;
       border: solid transparent;
-      border-radius: 16px;
+      border-radius: 6px;
       border-width: 0 0 4px;
       box-sizing: border-box;
       color: #FFFFFF;
@@ -307,7 +328,7 @@ body {
       background-clip: padding-box;
       background-color: #9b1cf6;
       border: solid transparent;
-      border-radius: 16px;
+      border-radius: 6px;
       border-width: 0 0 4px;
       bottom: -4px;
       content: "";
