@@ -217,7 +217,7 @@ body {
     display: none;
 }
 
-#iframe-video-mobile {display: none}
+#attached-element #iframe-video-mobile {display: none}
 
 
 /* Only for mobile devices and tablets */
@@ -397,5 +397,5 @@ body {
 
     #thumbnail-video {display: none} 
 
-    #iframe-video-mobile {display: block}   
+    #attached-element #iframe-video-mobile {display: block}   
 }
