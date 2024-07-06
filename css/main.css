@@ -217,6 +217,8 @@ body {
     display: none;
 }
 
+#iframe-video-mobile {display: none}
+
 
 /* Only for mobile devices and tablets */
 @media only screen and (max-width: 1000px){
@@ -393,5 +395,7 @@ body {
 
     #requestMotionPermissionImage {display: inline-block}
 
-    #thumbnail-video {display: none}    
+    #thumbnail-video {display: none} 
+
+    #iframe-video-mobile {display: block}   
 }
