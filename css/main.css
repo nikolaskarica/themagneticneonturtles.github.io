@@ -76,6 +76,8 @@ body {
     background-color: #357392;
     padding: 0 5px 0 5px;
     color: #c4faad;
+    border-radius: 3px;
+    padding: 2px 5px;
 }
 
 .bot-section {
